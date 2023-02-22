@@ -17,12 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// todo: Empezar a crear las rutas de los middlwware que voy a escribir
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'emailverified'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/verificacion',function (){
+    return view('verificacion');
+})->name('verificacion');
+
+

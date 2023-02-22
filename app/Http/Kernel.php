@@ -65,6 +65,9 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         // Middlewares woobsingChallenge.
-        
+
+        'emailverified' => \App\Http\Middleware\EmailVerifiedAt::class,
+
+
     ];
 }
