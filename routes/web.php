@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'emailverified'
+    'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
@@ -34,3 +34,6 @@ Route::get('/verificacion',function (){
 })->name('verificacion');
 
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware([ 'auth', 'emailverified' ])->name('dashboard');
