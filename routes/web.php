@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 
 
-// todo: Empezar a crear las rutas de los middlwware que voy a escribir
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -29,11 +28,17 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// Rutas WoobsingChallenge
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware([ 'auth', ])->name('dashboard');
+
 Route::get('/verificacion',function (){
     return view('verificacion');
 })->name('verificacion');
 
+Route::get('/sesiones',function (){
+    return view('sesiones');
+})->name('sesiones');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware([ 'auth', 'emailverified' ])->name('dashboard');

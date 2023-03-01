@@ -67,6 +67,7 @@ class Kernel extends HttpKernel
         // Middlewares woobsingChallenge.
 
         'emailverified' => \App\Http\Middleware\EmailVerifiedAt::class,
+        'days' => \App\Http\Middleware\Days::class,
 
 
     ];

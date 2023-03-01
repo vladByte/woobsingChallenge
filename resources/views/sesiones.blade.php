@@ -17,7 +17,7 @@
     </head>
     <body >
         <div class="container">
-            <div class="flex content-center bg-cyan-600 text-white mx-6">Página de Sesiones</div>
+            <div class="flex content-center bg-cyan-600 text-white mx-6">Página de Verificación</div>
         </div>
     </body>
 </html>
